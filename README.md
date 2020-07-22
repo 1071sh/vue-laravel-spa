@@ -10,9 +10,9 @@ Laravel6.x と Vue Router で vue.js の SPA 構築
 
 # Usage
 
-DEMO の実行方法など、"hoge"の基本的な使い方を説明する
+使い方
 
 ```bash
-# docker起動
-$ docker-compose up -d
+# phpコンテナに入る
+$ docker-compose exec php bash
 ```
