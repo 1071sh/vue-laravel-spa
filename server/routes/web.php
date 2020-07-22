@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/{any}', function () { // 全てのHTTPメソッドに適用
     return view('welcome');
-});
+})->where('any', '.*');           // .*は正規表現で0文字以上の任意の文字列を意味する
+
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
