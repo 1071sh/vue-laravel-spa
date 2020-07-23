@@ -23,13 +23,19 @@ Route::get('/user/{user}', function (App\User $user) {
     return response()->json(['user' => $user]);
 });
 
-// ユーザ削除
+// 更新
+Route::patch('/user/{user}', function (App\User $user, Request $request) {
+    $user->update($request->user);
+    return response()->json(['user' => $user]);
+});
+
+// 削除
 Route::delete('/user/{user}', function (App\User $user) {
     $user->delete();
     return response()->json(['message' => 'delete successfully']);
 });
 
-// ユーザ作成処理
+// 新規作成
 Route::post('/user', function (Request $request) {
     $user = App\User::create($request->user);
     return response()->json(['user' => $user]);

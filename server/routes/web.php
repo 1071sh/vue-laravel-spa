@@ -17,4 +17,3 @@ Route::get('/{any}', function () { // 全てのHTTPメソッドに適用
 
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
